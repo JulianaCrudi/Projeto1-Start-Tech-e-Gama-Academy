@@ -1,0 +1,166 @@
+    * {
+    margin: 0;
+    padding: 0;
+    color: #E5A470;
+    background: #030414;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* Formatação do header onde contém o LOGO e MENU */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px 8px 6px -6px #2E314D;
+}
+
+#menu ul {
+    display: flex;
+}
+
+#menu ul li {
+    padding: 5px;
+    border-right: 1px solid #DCBD77;
+}
+
+#menu :last-child {
+    border-right: none;
+}
+
+#menu a {
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+    transition: 500ms;
+}
+
+#menu a:hover {
+    color: #F7E9D9;
+}
+
+
+/* FIM HEADER */
+
+
+/* Formatação Container, onde contém o conteúdo principal da página */
+
+.container {
+    text-align: center;
+    clear: both;
+}
+
+.container #name h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-top: 70px;
+}
+
+.container #name h5 {
+    font-size: 25px;
+}
+
+#seta {
+    font-size: 40px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation {
+    transition: 300ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active {
+    display: block !important;
+}
+
+#sobre {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Formatação do FORM */
+
+#form {
+    width: 40%;
+    margin: 20px auto;
+}
+
+#form p {
+    color: #F5DA81;
+}
+
+input {
+    width: 40%;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#enviar {
+    width: 20%;
+    background-color: #F5DA81;
+    color: #030414;
+    padding: 5px;
+    font-weight: 600;
+    box-shadow: 1px 2px 4px #B29522;
+    cursor: pointer;
+    transition: 500ms;
+    margin-left: 5px;
+}
+
+#enviar:hover {
+    background-color: #E5A470;
+    box-shadow: 1px 2px 4px #F1D2B1;
+    color: #fff;
+}
+
+
+/* FIM do FORM */
+
+
+/*FIM CONTAINER*/
+
+
+/* RESPONSIVIDADE */
+
+@media only screen and (max-width:480px) {
+    header {
+        width: 100%;
+    }
+    .container #name h1 {
+        font-size: 30px;
+    }
+    .container #name h5 {
+        font-size: 15px;
+    }
+    #sobre {
+        width: 80%;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    input {
+        width: 100%;
+    }
+    #enviar {
+        width: 100%;
+    }
